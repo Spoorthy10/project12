@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+<body>
+    <h1>WELCOME TO LOGIN PAGE</h1>
+    {%if email == 'raja@gmail.com'%}
+        {%if pass == '12345'%}
+            <h1>this is login page for {{email}}</h1>
+            <a href="{% url 'home' %}">home</a>
+            <a href="{% url 'aboutus' %}">aboutus</a>
+        {%else%}
+            <h1>invalid password</h1>
+        {%endif%}
+    {%else%}
+        <h1>invalid password</h1>
+    {%endif%}
+</body>
+</html>
